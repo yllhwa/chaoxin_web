@@ -1,0 +1,12 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+<div class="container">
+<h1>超星学习通自动签到</h1>
+{{ wtf.quick_form(form) }}
+1.提交后服务器会开始签到,等待一段时间后会返回,如果返回的是sucess则签到成功,否则我也不知道啥原因<br>
+2.图片上传在/upload下进行,图片码仅会出现一次.图片码在一定时间内可以重复使用。<a href={{ url_for("upload") }}>图片上传地址</a><br>
+3.有问题联系qq:?????????<br>
+4.为了防止滥用使用了授权码机制,请不要滥用.本服务仅作为学习工具
+</div>
+{% endblock %}
